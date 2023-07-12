@@ -1,0 +1,21 @@
+<odoo>
+    <data noupdate="0">
+        <record model="ir.module.category" id="module_categorie_groupe">
+            <field name="name">Gestion de restaurant</field>
+            <field name="sequence">0</field>
+            <field name="visible" eval="0"/>
+        </record>
+        <record id="group_responsable" model="res.groups">
+            <field name="name">Responsable</field>
+            <field name="category_id" ref="resto.module_categorie_groupe"/>
+        </record>
+        <record id="group_vendeur" model="res.groups">
+            <field name="name">Vendeur</field>
+            <field name="category_id" ref="resto.module_categorie_groupe"/>
+        </record>
+        <record id="group_chef" model="res.groups">
+            <field name="name">Chef</field>
+            <field name="category_id" ref="resto.module_categorie_groupe"/>
+        </record>
+    </data>
+</odoo>

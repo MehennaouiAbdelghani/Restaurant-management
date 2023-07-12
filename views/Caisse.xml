@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="caisse_tree_view" model="ir.ui.view">
+            <field name="name">caisse_tree_view</field>
+            <field name="model">caisse</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="date_debut"/>
+                    <field name="date_fin"/>
+                    <field name="solde"/>
+                    <field name="montant_total_ventes"/>
+                    <field name="montant_total_remises"/>
+                    <field name="montant_total_depenses"/>
+                </tree>
+            </field>
+        </record>
+        <record id="caisse_form_view" model="ir.ui.view">
+            <field name="name">caisse_form_view</field>
+            <field name="model">caisse</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="calculet_global_totale" string="actualiset" type="object" class="oe_highlight"/>
+                    </header>
+                    <sheet>
+                        <group style="background-color: rgba(139, 169, 230, 0.434);
+                                        padding: 10px;
+                                        margin: 20px;
+                                        border: 3px solid rgba(139, 169, 230, 0.698);
+                                        color: green;
+                                        border-radius: 10px;
+                                        font-size: 30px;
+                                        width: 100%;
+                                        text-align: center;
+                                        height: 100%;">
+                            <group>
+                                <field name="date_debut"/>
+                                <field name="date_fin"/>
+                            </group>
+                            <group>
+                                <field name="solde" style="background-color: black;
+                                                            border: 3px solid black;
+                                                            color: green;
+                                                            font-size: 30px;
+                                                            text-align: center;"/>
+                            </group>
+                        </group>
+                        <group style="margin: 20px;
+                                        padding: 10px;
+                                        background-color: rgba(139, 169, 230, 0.434);
+                                        border: 3px solid rgba(139, 169, 230, 0.698);
+                                        border-radius: 10px;text-align: center;
+                                        width: 100%;">
+                            <field name="montant_total_ventes" style="border: 3px solid black;
+                                                            color: black;width: 60%; "/>
+                            <field name="montant_total_remises" style="border: 3px solid black;
+                                                            color: black;width: 60%;"/>
+                            <field name="montant_total_depenses" style="border: 3px solid black;
+                                                            color: black;width: 60%;"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="resto.action_caisse" model="ir.actions.act_window">
+            <field name="name">Caisse</field>
+            <field name="res_model">caisse</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+    </data>
+</odoo>

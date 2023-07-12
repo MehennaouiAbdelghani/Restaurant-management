@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="minimal_layout_inherit" inherit_id="report.minimal_layout">
+        <xpath expr="." position="inside">
+            <link rel='stylesheet' href="/resto/static/src/css/sheet.css"/>
+        </xpath>
+    </template>
+</odoo>

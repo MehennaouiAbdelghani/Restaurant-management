@@ -1,0 +1,527 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* resto
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20230418\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-06 23:06+0000\n"
+"PO-Revision-Date: 2023-07-06 23:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: resto
+#: model:ir.actions.report,print_report_name:resto.action_bonvent_report
+#: model:ir.actions.report,print_report_name:resto.menu_details_report
+msgid "'Registration Event'"
+msgstr ""
+
+#. module: resto
+#: model:ir.ui.menu,name:resto.menu_enregistrement_ventes
+msgid "3333"
+msgstr "3333"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.report_liste_bond_vents
+msgid "<strong>Date:</strong>"
+msgstr "<strong>التاريخ</strong>"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.report_liste_bond_vents
+msgid "<strong>Le vendeur:</strong>"
+msgstr "<strong>البائع</strong>"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.report_liste_bond_vents
+msgid "<strong>Montant total:</strong>"
+msgstr "<strong>المبلغ المستحق</strong>"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.report_liste_bond_vents
+msgid "<strong>Numéro du bon:</strong>"
+msgstr "<strong>رقم القسيمة</strong>"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.liste_ventes_form_view
+#: model_terms:ir.ui.view,arch_db:resto.report_liste_bond_vents
+msgid "Article"
+msgstr "الطبق"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.report_liste_articles
+msgid "Article :"
+msgstr "الطبق"
+
+#. module: resto
+#: model:ir.actions.act_window,name:resto.action_liste_articles
+#: model:ir.ui.menu,name:resto.menu_articles
+msgid "Articles"
+msgstr "الأطباق"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.liste_ventes_tree_view
+msgid "Articles vendus"
+msgstr "الأطباق المباعة"
+
+#. module: resto
+#: model:ir.actions.act_window,name:resto.action_caisse
+#: model:ir.ui.menu,name:resto.menu_caisse
+msgid "Caisse"
+msgstr "الخزينة"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.liste_ventes_form_view
+msgid "Calculez le montant que vous retournez"
+msgstr "حساب المبلع الذي ترجعه"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.report_liste_articles
+msgid "Categore :"
+msgstr "الصنف"
+
+#. module: resto
+#: model:ir.actions.act_window,name:resto.action_gestion_categories
+#: model_terms:ir.ui.view,arch_db:resto.liste_articles_search
+msgid "Categories"
+msgstr "الأصناف"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_gestion_categories__nom_categorie
+#: model:ir.model.fields,field_description:resto.field_liste_articles__categorue_id
+msgid "Catégorie"
+msgstr "الصنف"
+
+#. module: resto
+#: model:ir.ui.menu,name:resto.menu_Categories
+msgid "Catégories"
+msgstr ""
+
+#. module: resto
+#: model:res.groups,name:resto.group_chef
+msgid "Chef"
+msgstr "الشيف"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_caisse__create_uid
+#: model:ir.model.fields,field_description:resto.field_enregistrement_ventes__create_uid
+#: model:ir.model.fields,field_description:resto.field_gestion_categories__create_uid
+#: model:ir.model.fields,field_description:resto.field_liste_articles__create_uid
+#: model:ir.model.fields,field_description:resto.field_liste_depenses__create_uid
+#: model:ir.model.fields,field_description:resto.field_liste_ventes__create_uid
+#: model:ir.model.fields,field_description:resto.field_statistique__create_uid
+msgid "Created by"
+msgstr "منشأ من طرف"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_caisse__create_date
+#: model:ir.model.fields,field_description:resto.field_enregistrement_ventes__create_date
+#: model:ir.model.fields,field_description:resto.field_gestion_categories__create_date
+#: model:ir.model.fields,field_description:resto.field_liste_articles__create_date
+#: model:ir.model.fields,field_description:resto.field_liste_depenses__create_date
+#: model:ir.model.fields,field_description:resto.field_liste_ventes__create_date
+#: model:ir.model.fields,field_description:resto.field_statistique__create_date
+msgid "Created on"
+msgstr "منشأ من "
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.report_liste_articles
+msgid "DZ"
+msgstr ""
+
+#. module: resto
+#: model:ir.actions.act_window,name:resto.action_liste_depenses
+msgid "Depenses"
+msgstr "نفقات"
+
+#. module: resto
+#: model:ir.ui.menu,name:resto.menu_liste_articles
+msgid "Des Articles"
+msgstr "الأطباق"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_caisse__display_name
+#: model:ir.model.fields,field_description:resto.field_enregistrement_ventes__display_name
+#: model:ir.model.fields,field_description:resto.field_gestion_categories__display_name
+#: model:ir.model.fields,field_description:resto.field_liste_articles__display_name
+#: model:ir.model.fields,field_description:resto.field_liste_depenses__display_name
+#: model:ir.model.fields,field_description:resto.field_liste_ventes__display_name
+#: model:ir.model.fields,field_description:resto.field_statistique__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_caisse__date_debut
+#: model:ir.model.fields,field_description:resto.field_liste_depenses__date_depense
+#: model:ir.model.fields,field_description:resto.field_statistique__date_debut
+msgid "Du"
+msgstr "من"
+
+#. module: resto
+#: model:ir.ui.menu,name:resto.menu_depenses
+msgid "Dépenses"
+msgstr "يعتمد"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.liste_ventes_form_view
+msgid "Form des ventes"
+msgstr "واجهة البيع"
+
+#. module: resto
+#: model:ir.ui.menu,name:resto.menu_global
+msgid "Gestion Restaurant"
+msgstr "إدارة مطعم"
+
+#. module: resto
+#: model:ir.module.category,name:resto.module_categorie_groupe
+msgid "Gestion de restaurant"
+msgstr "إدارة مطعم"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.liste_articles_search
+#: model_terms:ir.ui.view,arch_db:resto.liste_vent_search
+msgid "Group By"
+msgstr "مجمع حسب"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_caisse__id
+#: model:ir.model.fields,field_description:resto.field_enregistrement_ventes__id
+#: model:ir.model.fields,field_description:resto.field_gestion_categories__id
+#: model:ir.model.fields,field_description:resto.field_liste_articles__id
+#: model:ir.model.fields,field_description:resto.field_liste_depenses__id
+#: model:ir.model.fields,field_description:resto.field_liste_ventes__id
+#: model:ir.model.fields,field_description:resto.field_statistique__id
+msgid "ID"
+msgstr "رمز تعريفي"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.statistique_form_view
+msgid "Idea Form"
+msgstr "واجهة"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.report_liste_articles
+msgid "Image de plat"
+msgstr "صورة الطبق"
+
+#. module: resto
+#: model:ir.actions.report,name:resto.action_bonvent_report
+msgid "Imprimer Ticket"
+msgstr "طباعة قسيمة البيع"
+
+#. module: resto
+#: model:ir.ui.menu,name:resto.menu_imprimer_menu
+msgid "Imprimer le menu"
+msgstr "طباعة قائمة الطعام"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.report_liste_articles
+msgid "Informations sur le plat"
+msgstr "معلومات حول الطبق"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.liste_vent_kanban
+msgid "Kanban View (Grouped by create_date)"
+msgstr "عرض كانبان"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_caisse____last_update
+#: model:ir.model.fields,field_description:resto.field_enregistrement_ventes____last_update
+#: model:ir.model.fields,field_description:resto.field_gestion_categories____last_update
+#: model:ir.model.fields,field_description:resto.field_liste_articles____last_update
+#: model:ir.model.fields,field_description:resto.field_liste_depenses____last_update
+#: model:ir.model.fields,field_description:resto.field_liste_ventes____last_update
+#: model:ir.model.fields,field_description:resto.field_statistique____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_caisse__write_uid
+#: model:ir.model.fields,field_description:resto.field_enregistrement_ventes__write_uid
+#: model:ir.model.fields,field_description:resto.field_gestion_categories__write_uid
+#: model:ir.model.fields,field_description:resto.field_liste_articles__write_uid
+#: model:ir.model.fields,field_description:resto.field_liste_depenses__write_uid
+#: model:ir.model.fields,field_description:resto.field_liste_ventes__write_uid
+#: model:ir.model.fields,field_description:resto.field_statistique__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_caisse__write_date
+#: model:ir.model.fields,field_description:resto.field_enregistrement_ventes__write_date
+#: model:ir.model.fields,field_description:resto.field_gestion_categories__write_date
+#: model:ir.model.fields,field_description:resto.field_liste_articles__write_date
+#: model:ir.model.fields,field_description:resto.field_liste_depenses__write_date
+#: model:ir.model.fields,field_description:resto.field_liste_ventes__write_date
+#: model:ir.model.fields,field_description:resto.field_statistique__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_liste_articles__prix
+msgid "Le prix du plat"
+msgstr "سعر الطبق"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.liste_ventes_tree_view
+msgid "Liste des ventes"
+msgstr "قائمة المبيعات"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_liste_depenses__mofit
+msgid "Mofit"
+msgstr ""
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_liste_depenses__montant
+msgid "Montant dépanse"
+msgstr "سعر النفقات"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_caisse__montant_total_depenses
+msgid "Montant total des dépenses"
+msgstr "السعر الإجمالي للنفقات"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_caisse__montant_total_remises
+msgid "Montant total des remises"
+msgstr "المبلغ العام الذي تم تخفيضه"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_caisse__montant_total_ventes
+msgid "Montant total des ventes"
+msgstr "المبلغ الإجمالي للمبيعات"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.liste_ventes_form_view
+msgid "Mrp production lines"
+msgstr ""
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_liste_ventes__net_payer
+msgid "Net à Payer"
+msgstr ""
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_liste_articles__name
+#: model_terms:ir.ui.view,arch_db:resto.liste_articles_search
+msgid "Nom"
+msgstr "إسم"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_liste_ventes__nomarticle_ids
+#: model:ir.model.fields,field_description:resto.field_statistique__nomarticles_id
+msgid "Nom Article"
+msgstr "إسم الطبق"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.report_liste_articles
+msgid "Not Found"
+msgstr "غير معرف"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_liste_ventes__n_vente
+msgid "N° Vente"
+msgstr "رقم البيع التسلسلي "
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_enregistrement_ventes__orderlines_id
+msgid "Order Lines"
+msgstr ""
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_liste_articles__photo
+msgid "Photo"
+msgstr "صورة"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_statistique__porsontage
+msgid "Porsontage"
+msgstr "النسبة"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.liste_articles_search
+#: model_terms:ir.ui.view,arch_db:resto.report_liste_bond_vents
+msgid "Prix"
+msgstr "الثمن"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.report_liste_articles
+msgid "Prix :"
+msgstr "الثمن"
+
+#. module: resto
+#: model:ir.actions.act_window,name:resto.enregistrement_ventes
+msgid "Processus de vente"
+msgstr "عملية البيع"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_enregistrement_ventes__qte
+#: model:ir.model.fields,field_description:resto.field_statistique__qte_vendue
+msgid "Qte"
+msgstr "الكمية"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_statistique__qte_totale_chaque_produit
+msgid "Qte totale chaque produit"
+msgstr "كمية الإجملية لكل منتج"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.report_liste_bond_vents
+msgid "Quantité"
+msgstr "الكمية"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_liste_ventes__remise
+msgid "Remise"
+msgstr "إرجاع"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_liste_ventes__rendu
+msgid "Rendu"
+msgstr ""
+
+#. module: resto
+#: model:res.groups,name:resto.group_responsable
+msgid "Responsable"
+msgstr "المسؤل"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.liste_ventes_form_view
+msgid "Réduction du prix"
+msgstr ""
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_caisse__solde
+msgid "Solde"
+msgstr "الإجمالي"
+
+#. module: resto
+#: model:ir.ui.menu,name:resto.menu_statistique
+msgid "Statistique"
+msgstr "إصائيات"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_enregistrement_ventes__total
+#: model:ir.model.fields,field_description:resto.field_liste_ventes__global_total
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.report_liste_bond_vents
+msgid "Totale"
+msgstr "الإجمالي"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_statistique__user_id
+msgid "Utilisateur"
+msgstr "المستعمل"
+
+#. module: resto
+#: model:res.groups,name:resto.group_vendeur
+#: model_terms:ir.ui.view,arch_db:resto.liste_vent_kanban
+#: model_terms:ir.ui.view,arch_db:resto.liste_ventes_tree_view
+msgid "Vendeur"
+msgstr "البائع"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.liste_vent_search
+msgid "Vendu par"
+msgstr "مباع من طرف"
+
+#. module: resto
+#: model:ir.actions.act_window,name:resto.action_liste_ventes
+#: model:ir.ui.menu,name:resto.menu_ventes
+msgid "Ventes"
+msgstr "المبيعات"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_liste_ventes__versement
+msgid "Versement"
+msgstr ""
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.report_liste_bond_vents
+msgid "Voucher Details"
+msgstr ""
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.caisse_form_view
+#: model_terms:ir.ui.view,arch_db:resto.statistique_form_view
+msgid "actualiset"
+msgstr "تحديث"
+
+#. module: resto
+#: model:ir.model,name:resto.model_caisse
+msgid "caisse"
+msgstr "الصندوق"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.liste_articles_search
+msgid "categorie"
+msgstr "الصنف"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.liste_vent_search
+msgid "create_date"
+msgstr "تاريخ الإنشاء"
+
+#. module: resto
+#: model:ir.model,name:resto.model_enregistrement_ventes
+msgid "enregistrement.ventes"
+msgstr "حفظ.البيع"
+
+#. module: resto
+#: model:ir.model,name:resto.model_gestion_categories
+msgid "gestion.categories"
+msgstr "إدارة.الفات"
+
+#. module: resto
+#: model:ir.model,name:resto.model_liste_articles
+msgid "liste.articles"
+msgstr "قائمة.الأطباق"
+
+#. module: resto
+#: model:ir.model,name:resto.model_liste_depenses
+msgid "liste.depenses"
+msgstr "قائمة.النفقات"
+
+#. module: resto
+#: model:ir.model,name:resto.model_liste_ventes
+msgid "liste.ventes"
+msgstr "قائمة.المبيعات"
+
+#. module: resto
+#: model:ir.actions.report,name:resto.menu_details_report
+msgid "menu report"
+msgstr ""
+
+#. module: resto
+#: model:ir.model,name:resto.model_report_resto_report_liste_articles
+msgid "report.resto.report_liste_articles"
+msgstr ""
+
+#. module: resto
+#: model:ir.actions.act_window,name:resto.action_liste_statistique
+#: model:ir.model,name:resto.model_statistique
+msgid "statistique"
+msgstr "إحصائيات"
+
+#. module: resto
+#: model_terms:ir.ui.view,arch_db:resto.liste_ventes_form_view
+msgid "sélectionner des Articles"
+msgstr "إختر أطباق"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_statistique__total
+msgid "totale"
+msgstr "الإجمالي"
+
+#. module: resto
+#: model:ir.model.fields,field_description:resto.field_statistique__totale_chaque_produit
+msgid "totale chaque produit"
+msgstr "السعر الإجمالي للمنتج"

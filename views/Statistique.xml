@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="statistique_tree_view" model="ir.ui.view">
+            <field name="name">statistique_tree_view</field>
+            <field name="model">statistique</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="date_debut"/>
+                    <field name="date_fin"/>
+                    <field name="user_id"/>
+                    <field name="nomarticles_id"/>
+                    <field name="qte_vendue"/>
+                    <field name="qte_totale_chaque_produit"/>
+                    <field name="total"/>
+                    <field name="totale_chaque_produit"/>
+                    <field name="porsontage" widget="progressbar"/>
+                </tree>
+            </field>
+        </record>
+        <record id="statistique_form_view" model="ir.ui.view">
+            <field name="name">statistique_form_view</field>
+            <field name="model">statistique</field>
+            <field name="arch" type="xml">
+                <form string="Idea Form">
+                    <header>
+                        <button name="statistique_vents" string="actualiset" type="object" class="oe_highlight"/>
+                    </header>
+                    <sheet>
+                        <group style="background-color: rgba(139, 169, 230, 0.434);
+                                        padding: 10px;
+                                        border: 3px solid rgba(139, 169, 230, 0.698);
+                                        color: green;
+                                        border-radius: 10px;
+                                        font-size: 30px;
+                                        width: 100%;
+                                        text-align: center;
+                                        height: 100%;">
+                            <group>
+                                <field name="date_debut"/>
+                                <field name="date_fin"/>
+                            </group>
+                            <group>
+                                <field name="user_id"/>
+                                <field name="nomarticles_id"/>
+                            </group>
+                        </group>
+                        <group style="margin-top: 30px;
+                                        padding: 10px;
+                                        background-color: rgba(139, 169, 230, 0.434);
+                                        border: 3px solid rgba(139, 169, 230, 0.698);
+                                        border-radius: 10px;
+                                        text-align: center;
+                                        width: 100%;">
+                            <group>
+                                <field name="qte_vendue" style="border: 3px solid black;
+                                                            color: black;width: 50%;"/>
+                                <field name="total" style="border: 3px solid black;
+                                                            color: black;width: 50%;"/>
+
+                                <field name="qte_totale_chaque_produit" style="border: 3px solid black;
+                                                            color: black;width: 50%;"/>
+                                <field name="totale_chaque_produit" style="border: 3px solid black;
+                                                            color: black;width: 50%;"/>
+                            </group>
+                            <group>
+                                <field name="porsontage" widget="percentpie" style="color: green;height: 100%;width: 100%;"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="resto.action_liste_statistique" model="ir.actions.act_window">
+            <field name="name">statistique</field>
+            <field name="res_model">statistique</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+    </data>
+</odoo>

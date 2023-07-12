@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="enregistrement_ventes_search" model="ir.ui.view">
+            <field name="name">enregistrement_ventes_search</field>
+            <field name="model">enregistrement.ventes</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="orderlines_id"/>
+                    <group expand="0" string="Group By">
+                        <!-- Group by vendeur_id -->
+                        <filter string="Articles" name="orderlines_id" context="{'group_by': 'orderlines_id'}"/>
+                        <!-- Group by heure_vente -->
+                        <filter string="Qte" name="qte" context="{'group_by': 'qte'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="enregistrement_ventes_tree_view" model="ir.ui.view">
+            <field name="name">enregistrement_ventes_tree_view</field>
+            <field name="model">enregistrement.ventes</field>
+            <field name="arch" type="xml">
+                <tree default_order="qte asc">
+                    <field name="orderlines_id"/>
+                    <field name="qte"/>
+                    <field name="total"/>
+                </tree>
+            </field>
+        </record>
+        <record id="enregistrement_ventes_form_view" model="ir.ui.view">
+            <field name="name">enregistrement_ventes_form_view</field>
+            <field name="model">enregistrement.ventes</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group style="background-color: rgba(139, 169, 230, 0.434);
+                                        padding: 10px;
+                                        border: 3px solid rgba(139, 169, 230, 0.698);
+                                        border-radius: 10px;
+                                        width: 100%;
+                                        text-align: center;
+                                        height: 100%;">
+                            <group style="width: 50%;">
+                                <field name="orderlines_id" style="border: 3px solid black;color: black;"/>
+                            </group>
+                            <group style="width: 20%;">
+                                <field name="qte" style="border: 3px solid black;color: black;"/>
+                            </group>
+                            <group style="width: 30%;">
+                                <field name="total" style="background-color: black;
+                         color: green;
+                         border-radius: 50px;
+                         width: 100px;
+                         font-size: 20px;
+                         font-weight: bold;
+                         text-align: center;"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+
+            </field>
+        </record>
+
+        <record id="resto.enregistrement_ventes" model="ir.actions.act_window">
+            <field name="name">Processus de vente</field>
+            <field name="res_model">enregistrement.ventes</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+    </data>
+</odoo>

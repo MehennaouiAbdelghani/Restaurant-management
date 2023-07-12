@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--  Menu Pricipale de Gestion Restaurant  -->
+        <menuitem id="menu_global"
+                  name="Gestion Restaurant"
+                  sequence="1"/>
+        <!--        sous menu de Catégories -->
+        <menuitem id="menu_articles"
+                  name="Articles"
+                  parent="menu_global"
+                  groups="resto.group_responsable,resto.group_chef,resto.group_vendeur"
+                  sequence="1"/>
+                    <menuitem id="menu_liste_articles"
+                              name="Des Articles"
+                              parent="menu_articles"
+                              action="resto.action_liste_articles"
+                              sequence="1"/>
+                    <menuitem id="menu_imprimer_menu"
+                              name="Imprimer le menu"
+                              parent="menu_articles"
+                              action="resto.menu_details_report"
+                              sequence="2"/>
+        <menuitem id="menu_Categories"
+                  name="Catégories"
+                  parent="menu_global"
+                  groups="resto.group_chef,resto.group_responsable"
+                  action="resto.action_gestion_categories"
+                  sequence="2"/>
+
+            <!--        Liste des Ventes-->
+        <menuitem id="menu_ventes"
+                  name="Ventes"
+                  parent="menu_global"
+                  groups="resto.group_vendeur,resto.group_responsable"
+                  action="resto.action_liste_ventes"
+                  sequence="3"/>
+
+<!--                    <menuitem id="menu_enregistrement_ventes"-->
+<!--                  name="3333"-->
+<!--                  parent="menu_global"-->
+<!--                    action="resto.enregistrement_ventes"-->
+<!--                  sequence="4"/>-->
+
+
+        <menuitem id="menu_caisse"
+                  name="Caisse"
+                  parent="menu_global"
+                  groups="resto.group_responsable"
+                  action="resto.action_caisse"
+                  sequence="5"/>
+
+
+        <menuitem id="menu_depenses"
+                  name="Dépenses"
+                  parent="menu_global"
+                  groups="resto.group_responsable"
+                  action="resto.action_liste_depenses"
+                  sequence="6"/>
+
+        <menuitem id="menu_statistique"
+                  name="Statistique"
+                  parent="menu_global"
+                  groups="resto.group_responsable"
+                  action="resto.action_liste_statistique"
+                  sequence="7"/>
+
+
+    </data>
+</odoo>

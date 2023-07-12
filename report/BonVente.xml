@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_bonvent_report" model="ir.actions.report">
+        <field name="name">Imprimer Ticket</field>
+        <field name="model">liste.ventes</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">resto.report_liste_bond_vents</field>
+        <field name="report_file">resto.report_liste_bond_vents</field>
+        <field name="print_report_name">'Registration Event'</field>
+        <field name="binding_type">report</field>
+        <field name="binding_model_id" ref="resto.model_liste_ventes"/>
+        <field name="paperformat_id" ref="resto.paperformat_bon_vents"/>
+
+    </record>
+
+    <template id="report_liste_bond_vents">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <div class="page">
+                    <div class="header">
+                        <!-- Header content goes here -->
+                    </div>
+                    <div class="content">
+                        <div class="voucher-info">
+                            <center>
+                                <h1 style="font-size:30pt;
+                                            background-color: black;
+                                            color: white;
+                                            display:inline-block;
+                                            border-radius: 200px;
+                                            width: 400px;
+                                            text-align: center;
+                                            font-style: italic;
+                                            font-weight: bold;">Voucher Details
+                                </h1>
+                            </center>
+                            <hr/>
+                            <br/>
+                            <p style="font-size:15pt">
+                                <strong>Numéro du bon:</strong>
+                                <span t-esc="doc.n_vente"/>
+                            </p>
+                            <p style="font-size:15pt">
+                                <strong>Date:</strong>
+                                <span t-esc="doc.create_date"/>
+                            </p>
+                            <p style="font-size:15pt">
+                                <strong>Le vendeur:</strong>
+                                <span t-esc="doc.create_uid.name"/>
+                            </p>
+                            <!-- Add other voucher details here -->
+                        </div>
+                        <br/>
+                        <hr style="border-bottom: 3px double;"/>
+                        <table class="voucher-lines" style="font-size:15pt">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:center;width: 150">Article</th>
+                                    <th style="text-align:center;width: 150">Prix</th>
+                                    <th style="text-align:center;width: 200">Quantité</th>
+                                    <th style="text-align:center;width: 50">Totale</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="doc.nomarticle_ids" t-as="line">
+                                    <tr>
+                                        <td>
+                                            <center>
+                                                <span t-esc="line.orderlines_id.name"/>
+                                            </center>
+                                        </td>
+                                        <td>
+                                            <center>
+                                                <span t-esc="line.orderlines_id.prix"/>
+                                            </center>
+                                        </td>
+                                        <td>
+                                            <center>
+                                                <span t-esc="line.qte"/>
+                                            </center>
+                                        </td>
+                                        <td>
+                                            <center>
+                                                <span t-esc="line.total"/>
+                                            </center>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <hr style="border-bottom: 3px double;"/>
+                        <br/>
+                        <br/>
+                        <div class="voucher-total">
+                            <p style="display:inline-block;
+                                        font-size: 25px;
+                                        text-align: right;
+                                        border-bottom: 3px double;
+                                        font-weight: bold;">
+                                <strong>Montant total:</strong>
+                                <span t-esc="doc.global_total"/>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <!-- Footer content goes here -->
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

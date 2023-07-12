@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="liste_depenses_tree_view" model="ir.ui.view">
+            <field name="name">liste_depenses_tree_view</field>
+            <field name="model">liste.depenses</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="mofit"/>
+                    <field name="date_depense"/>
+                    <field name="montant"/>
+                </tree>
+            </field>
+        </record>
+        <record id="liste_depenses_form_view" model="ir.ui.view">
+            <field name="name">liste_depenses_form_view</field>
+            <field name="model">liste.depenses</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group style="background-color: rgba(139, 169, 230, 0.434);
+                                        padding: 10px;
+                                        border: 3px solid rgba(139, 169, 230, 0.698);
+                                        border-radius: 10px;
+                                        width: 100%;
+                                        text-align: center;
+                                        height: 100%;">
+                            <group>
+                                <field name="mofit" style="border: 3px solid black;
+                                                            color: black;width: 70%;"/>
+                                <field name="date_depense" style="border: 3px solid black;
+                                                            color: black;width: 70%;"/>
+                                <field name="montant" style="border: 3px solid black;
+                                                            color: black;width: 70%;"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="resto.action_liste_depenses" model="ir.actions.act_window">
+            <field name="name">Depenses</field>
+            <field name="res_model">liste.depenses</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+    </data>
+</odoo>

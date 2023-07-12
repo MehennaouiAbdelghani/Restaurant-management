@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- Define the kanban view -->
+        <record id="liste_vent_kanban" model="ir.ui.view">
+            <field name="name">liste_vent_kanban</field>
+            <field name="model">liste.ventes</field>
+            <field name="arch" type="xml">
+                <kanban string="Kanban View (Grouped by create_date)"
+                        default_order="create_date desc"
+                        default_group_by="create_uid"
+                        on_create="liste_ventes_form_view"
+                        examples="resto"
+                        sample="1"
+
+                >
+                    <!--quick_create_view="resto.liste_ventes_form_view"-->
+                    <field name="n_vente"/>
+                    <field name="create_date"/>
+                    <field name="global_total"/>
+                    <field name="create_uid" string="Vendeur"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_card">
+                                <div class="oe_kanban_card_content">
+                                    <div class="oe_kanban_card_title">
+                                        <field name="n_vente"/>
+                                    </div>
+                                    <div class="oe_kanban_card_footer">
+                                        <field name="create_date"/>
+                                        <field name="global_total"/>
+                                        <field name="create_uid" string="Vendeur"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+        <record id="liste_vent_search" model="ir.ui.view">
+            <field name="name">liste_vent_search</field>
+            <field name="model">liste.ventes</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="create_uid"/>
+                    <field name="create_date"/>
+                    <group expand="0" string="Group By">
+                        <!-- Group by vendeur_id -->
+                        <filter string="Vendu par" name="create_uid" context="{'group_by': 'create_uid'}"/>
+                        <!-- Group by heure_vente -->
+                        <filter string="create_date" name="create_date" context="{'group_by': 'create_date'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record id="liste_ventes_tree_view" model="ir.ui.view">
+            <field name="name">liste_ventes_tree_view</field>
+            <field name="model">liste.ventes</field>
+            <field name="arch" type="xml">
+                <tree default_order="create_date desc" string="Liste des ventes">
+                    <field name="n_vente"/>
+                    <field name="create_date"/>
+                    <field name="global_total"/>
+                    <field name="remise"/>
+                    <field name="net_payer"/>
+                    <field name="versement"/>
+                    <field name="rendu"/>
+                    <field name="create_uid" string="Vendeur"/>
+                    <field name="nomarticle_ids" string="Articles vendus"/>
+                </tree>
+            </field>
+        </record>
+        <record id="liste_ventes_form_view" model="ir.ui.view">
+            <field name="name">liste_ventes_form_view</field>
+            <field name="model">liste.ventes</field>
+            <field name="arch" type="xml">
+                <form string="Form des ventes">
+                    <sheet>
+                        <group style="background-color: rgba(139, 169, 230, 0.434);
+                                        padding: 10px;
+                                        margin: 20px;
+                                        border: 3px solid rgba(139, 169, 230, 0.698);
+                                        border-radius: 10px;">
+                            <group style="width:40%;">
+                                <field name="global_total" style="background-color: black;
+                                                                                         color: green;
+                                                                                         border-radius: 100px;
+                                                                                         font-size: 30px;
+                                                                                         width: 70%;
+                                                                                         text-align: center;"/>
+                            </group>
+                            <group style="width:60%;">
+                                <field name="nomarticle_ids" string="sélectionner des Articles">
+                                    <tree string="Mrp production lines" editable="bottom">
+                                        <field name="orderlines_id" string="Article" readonly="1"/>
+                                        <field name="qte" readonly="1"/>
+                                        <field name="total" readonly="1"/>
+                                    </tree>
+                                </field>
+                            </group>
+                            <group string="Réduction du prix" style="border: 3px solid rgba(139, 169, 230, 0.698);border-radius: 10px;">
+                                <field name="remise"/>
+                                <field name="net_payer"/>
+                            </group>
+                            <group string="Calculez le montant que vous retournez" style="border: 3px solid rgba(139, 169, 230, 0.698);border-radius: 10px;">
+                                <field name="versement"/>
+                                <field name="rendu"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="resto.action_liste_ventes" model="ir.actions.act_window">
+            <field name="name">Ventes</field>
+            <field name="res_model">liste.ventes</field>
+            <field name="view_mode">tree,form,kanban</field>
+        </record>
+
+
+    </data>
+</odoo>

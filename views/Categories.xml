@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="gestion_categories_tree_view" model="ir.ui.view">
+            <field name="name">gestion_categories_tree_view</field>
+            <field name="model">gestion.categories</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nom_categorie"/>
+                </tree>
+            </field>
+        </record>
+        <record id="gestion_categories_form_view" model="ir.ui.view">
+            <field name="name">gestion_categories_form_view</field>
+            <field name="model">gestion.categories</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group style="background-color: rgba(139, 169, 230, 0.434);
+                                        padding: 10px;
+                                        margin: 20px;
+                                        border: 3px solid rgba(139, 169, 230, 0.698);
+                                        color: green;
+                                        border-radius: 10px;
+                                        font-size: 30px;
+                                        width: 100%;
+                                        text-align: center;
+                                        height: 100%;">
+                            <group>
+                                <field name="nom_categorie" style="border: 3px solid black;"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="resto.action_gestion_categories" model="ir.actions.act_window">
+            <field name="name">Categories</field>
+            <field name="res_model">gestion.categories</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+    </data>
+</odoo>
